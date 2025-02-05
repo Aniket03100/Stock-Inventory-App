@@ -1,7 +1,7 @@
 ﻿# Stock Inventory Application
 
 ## Overview
-A web-based inventory management system built with **ASP.NET Core MVC**, **Microsoft SQL Server**, **Web API**, and **Angular**. This application helps businesses track stock, manage purchases and sales, and monitor inventory levels efficiently.
+A web-based inventory management system built with **Angular**, **ASP.NET Core Web API** and **Microsoft SQL Server**. This application helps businesses track stock, manage purchases and sales, and monitor inventory levels efficiently.
 
 ---
 
