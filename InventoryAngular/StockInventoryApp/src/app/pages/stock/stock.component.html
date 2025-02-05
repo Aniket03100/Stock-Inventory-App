@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      
+    </div>
+  
+    <h2>Stock List</h2>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Product Name</th>
+          <th>Created Date</th>
+          <th>Last Modified Date</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stock of stocks; let i = index"  >
+          <td>{{ i + 1 }}</td>
+          <td>{{ stock.productName }}</td>
+          <td>{{ stock.createdDate | date: 'dd-MMM-yyyy' }}</td>
+          <td>{{ stock.lastModifiedDate | date: 'dd-MMM-yyyy' }}</td>
+          <td [ngStyle]="{ color: stock.quantity === 0 ? 'red' : 'black' }">
+            {{ stock.quantity }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

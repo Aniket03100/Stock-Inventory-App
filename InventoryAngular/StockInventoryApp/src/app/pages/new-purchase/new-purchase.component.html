@@ -1,0 +1,43 @@
+<div class="form-container">
+  <h2>New Purchase</h2>
+  
+  <!-- Product and Purchase Date in the first row -->
+  <div>
+    <label for="productId">Product:</label>
+    <select id="productId" [(ngModel)]="productId">
+      <option *ngFor="let product of products" [value]="product.productId">
+        {{ product.productName }}
+      </option>
+    </select>
+  </div>
+  <div>
+    <label for="purchaseDate">Purchase Date:</label>
+    <input id="purchaseDate" type="date" [(ngModel)]="purchaseDate" />
+  </div>
+  
+  <!-- Quantity and Supplier Name in the second row -->
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" [(ngModel)]="quantity" placeholder="Enter quantity" />
+  </div>
+  <div>
+    <label for="supplierName">Supplier Name:</label>
+    <input id="supplierName" type="text" [(ngModel)]="supplierName" placeholder="Enter supplier name" />
+  </div>
+  
+  <!-- Invoice Amount and Invoice No in the third row -->
+  <div>
+    <label for="invoiceAmount">Invoice Amount:</label>
+    <input id="invoiceAmount" type="number" [(ngModel)]="invoiceAmount" placeholder="Enter invoice amount" />
+  </div>
+  <div>
+    <label for="invoiceNo">Invoice No:</label>
+    <input id="invoiceNo" type="text" [(ngModel)]="invoiceNo" placeholder="Enter invoice number" />
+  </div>
+  
+  <!-- Buttons in the final row -->
+  <div class="d-flex">
+    <button type="button" class="btn btn-secondary" routerLink="/purchase-list">Go To List</button>
+    <button type="submit" class="btn btn-success" (click)="savePurchase()">Save Purchase</button>
+  </div>
+</div>

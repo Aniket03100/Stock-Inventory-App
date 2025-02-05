@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="container">
+    <a class="brand">Stock Inventory App</a>
+    <ul class="nav-links" *ngIf="!isLoginPage">
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/sale-list" routerLinkActive="active">Sale List</a></li>
+      <li><a routerLink="/purchase-list" routerLinkActive="active">Purchase List</a></li>
+      <li><a routerLink="/stock" routerLinkActive="active">Stock</a></li>
+      <li><a routerLink="/product-list" routerLinkActive="active">Products</a></li>
+      <li>
+        <a 
+          href="#" 
+          (click)="onLogoutClick($event)" 
+          routerLinkActive="active">
+          Logout
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

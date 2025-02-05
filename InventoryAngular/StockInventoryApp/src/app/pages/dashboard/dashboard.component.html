@@ -1,0 +1,50 @@
+<div class="dashboard-container">
+  <div class="left-panel">
+    <div class="summary-cards">
+      <div class="card">
+        <p class="card-number">{{ totalProducts }}</p>
+        <h3 class="card-title">Total Products</h3>
+      </div>
+      <div class="card">
+        <p class="card-number">{{ totalStock }}</p>
+        <h3 class="card-title">Total Stock</h3>
+      </div>
+      <div class="card">
+        <p class="card-number">{{ lowStockCount }}</p>
+        <h3 class="card-title">Low Stock Items</h3>
+      </div>
+      <div class="card">
+        <p class="card-number">{{ totalPurchases }}</p>
+        <h3 class="card-title">Total Purchases</h3>
+      </div>
+      <div class="card">
+        <p class="card-number">{{ totalSales }}</p>
+        <h3 class="card-title">Total Sales</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="right-panel">
+    <div class="recent-activities">
+      <h2>Recent Activities</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Product</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let activity of recentActivities">
+            <td>{{ activity.date | date: 'dd-MMM-yyyy' }}</td>
+            <td>{{ activity.type }}</td>
+            <td>{{ activity.productName }}</td>
+            <td>{{ activity.quantity }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

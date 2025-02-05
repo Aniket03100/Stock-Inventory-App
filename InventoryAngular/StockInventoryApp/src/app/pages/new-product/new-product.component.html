@@ -1,0 +1,37 @@
+<div class="form-container">
+    <h2>New Product</h2>
+    
+    
+    <div>
+      <label for="productName">Product Name:</label>
+      <input id="productName" type="text" [(ngModel)]="productName" placeholder="Enter product" />
+    </div>
+    <div>
+      <label for="categoryName">Category Name:</label>
+      <input id="categoryName" type="text" [(ngModel)]="categoryName" placeholder="Enter category name" />
+    </div>
+    
+    
+    <div>
+      <label for="createdDate">Created Date:</label>
+      <input id="createdDate" type="date" [(ngModel)]="createdDate"  />
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input id="price" type="number" [(ngModel)]="price" placeholder="Enter Price" />
+    </div>
+    
+
+    <div>
+        <label for="productDetails">Product Details:</label>
+        <input id="productDetails" type="text" [(ngModel)]="productDetails" placeholder="Enter product details" />
+      </div>
+      
+
+    <!-- Buttons in the final row -->
+    <div class="d-flex">
+      <button type="button" class="btn btn-secondary" routerLink="/product-list">Go To List</button>
+      <button type="submit" class="btn btn-success" (click)="saveProduct()">Save Product</button>
+    </div>
+  </div>
+  

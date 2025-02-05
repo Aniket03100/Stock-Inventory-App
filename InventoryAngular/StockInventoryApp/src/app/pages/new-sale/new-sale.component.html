@@ -1,0 +1,52 @@
+<div class="form-container">
+  <h2>New Sale</h2>
+  
+  <!-- Product and Customer Name in one row -->
+  <div>
+    <label for="productId">Product:</label>
+    <select id="productId" [(ngModel)]="productId" (change)="checkStock()">
+      <option *ngFor="let product of products" [value]="product.productId">
+        {{ product.productName }}
+      </option>
+    </select>
+    <small *ngIf="stockMessage" [style.color]="isStockAvailable ? 'green' : 'red'">
+      {{ stockMessage }}
+    </small>
+  </div>
+  <div>
+    <label for="customerName">Customer Name:</label>
+    <input id="customerName" type="text" [(ngModel)]="customerName" placeholder="Enter customer name" />
+  </div>
+  
+  <!-- Sale Date and Quantity in another row -->
+  <div>
+    <label for="saleDate">Sale Date:</label>
+    <input id="saleDate" type="date" [(ngModel)]="saleDate" />
+  </div>
+  <div>
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" [(ngModel)]="quantity" placeholder="Enter quantity" />
+  </div>
+  
+  <!-- Mobile No and Invoice No in another row -->
+  <div>
+    <label for="mobileNo">Mobile No:</label>
+    <input id="mobileNo" type="text" [(ngModel)]="mobileNo" placeholder="Enter mobile number" />
+  </div>
+  <div>
+    <label for="invoiceNo">Invoice No:</label>
+    <input id="invoiceNo" type="text" [(ngModel)]="invoiceNo" placeholder="Enter invoice number" />
+  </div>
+  
+  <!-- Total Amount in a full-width row -->
+  <div style="grid-column: span 2;">
+    <label for="totalAmount">Total Amount:</label>
+    <input id="totalAmount" type="number" [(ngModel)]="totalAmount" placeholder="Enter total amount" />
+  </div>
+  
+  <!-- Buttons in the final row -->
+  <div class="d-flex">
+    <button type="button" class="btn btn-secondary" routerLink="/sale-list">Go To List</button>
+    <button type="submit" class="btn btn-success" (click)="saveSale()">Save Sale</button>
+  </div>
+</div>

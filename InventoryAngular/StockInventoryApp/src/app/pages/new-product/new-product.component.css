@@ -1,0 +1,56 @@
+.form-container {
+    width: 800px;
+    margin-top: 15px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+  
+    /* Centering the form */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Grid layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 25px;
+  }
+  
+  h2 {
+    grid-column: span 2; /* Span the title across both columns */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Buttons span across both columns */
+  .d-flex {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button.btn-success,
+  button.btn-secondary {
+    width: 48%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  

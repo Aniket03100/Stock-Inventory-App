@@ -1,0 +1,96 @@
+/* Dashboard Container Layout */
+.dashboard-container {
+  display: flex;
+  gap: 60px; /* Adds space between panels */
+  padding: 20px;
+  width: 1100px; /* Uses 80% of the screen width */
+  margin-top: 20px; /* Centers the container */
+  font-family: Arial, sans-serif;
+}
+
+/* Left Panel Styling */
+.left-panel {
+  flex: 5;
+}
+
+/* Right Panel Styling */
+.right-panel {
+  flex: 6;
+}
+
+/* Summary Cards Layout */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 50px; /* Adds more space between cards */
+}
+
+.summary-cards .card:nth-last-child(1) {
+  grid-column: span 2; /* Last card spans the full width */
+}
+
+/* Card Styles */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 8px 8px rgba(5, 228, 128, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 8px rgba(212, 88, 240, 0.2);
+}
+
+/* Card Number Styling */
+.card-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+/* Card Title Styling */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Recent Activities Table */
+.recent-activities {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activities h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
